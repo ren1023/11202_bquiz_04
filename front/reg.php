@@ -31,17 +31,41 @@
     </tr>
 </table>
 <div class="ct">
-    <button>註冊</button>
-    <button>重置</button>
+    <button onclick='reg()'>註冊</button>
+    <button onclick='clear()'>重置</button>
 </div>
 <script>
+    function reg(){
+        let user={
+            name:$("#name").val(),
+            acc:$("#acc").val(),
+            pw:$("#pw").val(),
+            tel:$("#tel").val(),
+            addr:$("#addr").val(),
+            email:$("#email").val()
+        }
+        $.get("./api/chk_acc.php",{acc:user.acc},(res)=>{
+            if(parseInt(res)==1 || user.acc== 'admin'){
+                alert(`此帳號${user.acc}已被使用`)
+            }
+            $.post("./api/reg.php",user,()=>{
+                location.href='?do=login'
+            })
+        })
+
+
+    }
     function chkacc(){
         let acc=$("#acc").val()
         $.get("./api/chk_acc.php",{acc},(res)=>{
-            if(parseInt(res)==1){
+            if(parseInt(res)==1 || acc== 'admin'){
                 alert(`此帳號${acc}已被使用`)
             }
             alert(`此帳號${acc}可以註冊`)
         })
+    }
+
+    function clear(){
+        $("#name,#acc,#pw,#tel,#addr,#email").val('');
     }
 </script>
