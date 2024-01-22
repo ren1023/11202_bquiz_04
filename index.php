@@ -41,7 +41,7 @@
             </span>
         </div>
         <div id="right">
-            <button onclick="location.href='?do=bycart'">我要購買</button>
+            <!-- <button onclick="location.href='?do=bycart'">我要購買</button> -->
             <?php
             $do = $_GET['do'] ?? 'main';
             $file = "./front/{$do}.php";
