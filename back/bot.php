@@ -8,6 +8,7 @@ if(!empty($_POST))
 
 <h2 class="ct">編輯頁尾版權區</h2>
 <form action="?do=bot" method="post">
+     <!-- table.all>tr>td.tt+td.pp>input:text -->
     <table class="all">
         <tr>
             <td class="tt">頁尾宣告內容</td>
