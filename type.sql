@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-01-31 06:09:32
+-- 產生時間： 2024-01-31 07:14:42
 -- 伺服器版本： 10.4.28-MariaDB
 -- PHP 版本： 8.2.4
 
@@ -34,6 +34,26 @@ CREATE TABLE `type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- 傾印資料表的資料 `type`
+--
+
+INSERT INTO `type` (`id`, `name`, `big_id`) VALUES
+(1, '流行皮件', 0),
+(2, '流行鞋區', 0),
+(3, '流行飾品', 0),
+(4, '背包', 0),
+(12, '男用皮件', 1),
+(13, '女用皮件', 1),
+(14, '少女鞋區', 2),
+(15, '紳士流行鞋區', 2),
+(16, '時尚手錶', 3),
+(17, '時尚珠寶', 3),
+(18, '背包', 4),
+(23, '電腦3c', 0),
+(24, 'CPU', 23),
+(26, 'RAM', 23);
+
+--
 -- 已傾印資料表的索引
 --
 
@@ -51,7 +71,7 @@ ALTER TABLE `type`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `type`
 --
 ALTER TABLE `type`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
