@@ -44,6 +44,17 @@
 <script>
     getTypes(0) //當網頁開啟時，就載入大分類資料
 
+    function edit(dom,id){
+        let name=prompt("請輸您要修改的分類名稱:",`${$(dom).parent().prev().text()}`)
+        if(name!=null){
+            $.post("./api/save_type.php",{name,id},()=>{
+                $(dom).parent().prev().text(name)  //把之前的值再存回來，不用重整畫面
+                // location.reload();//重整畫面
+
+            })
+        }
+    }
+
     function getTypes(big_id) {
         $.get('./api/get_types.php', {
             big_id
