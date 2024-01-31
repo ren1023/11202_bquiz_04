@@ -19,6 +19,6 @@ if(!empty($_POST))
     </table>
     <div class="ct">
         <input type="submit" value="編輯">
-        <input type="submit" value="重置">
+        <input type="reset" value="重置">
     </div>
 </form>

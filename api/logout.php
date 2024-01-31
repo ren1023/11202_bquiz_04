@@ -3,4 +3,4 @@ session_start();
 
 unset($_SESSION['mem'],$_SESSION['admin']);
 
-header('location:"./back.php"');
+header('location:"../index.php"');
