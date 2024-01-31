@@ -93,7 +93,7 @@
 
 <!-- 商品管理 -->
 <h2 class="ct">商品管理</h2>
-<div class="ct"><button>新增商品</button></div>
+<div class="ct"><button onclick="location.href='?do=add_goods'">新增商品</button></div>
 <table class="all">
     <tr class="tt ct">
         <th>編號</th>
