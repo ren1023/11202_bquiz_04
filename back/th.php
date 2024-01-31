@@ -1,6 +1,7 @@
 <h2 class="ct">商品分類</h2>
 <div class="ct">
-    新增大分類<input type="text" name="big" id="big"><button>新增</button>
+    新增大分類<input type="text" name="big" id="big">
+    <button>新增</button>
 </div>
 <div class="ct">
     新增中分類
@@ -24,6 +25,8 @@
     </tr>
 </table>
 
+
+<hr>
 
 <!-- 商品管理 -->
 <h2 class="ct">商品管理</h2>
