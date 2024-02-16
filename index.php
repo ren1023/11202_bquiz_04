@@ -64,13 +64,13 @@
                 ?>
                     <div class="ww">
                         <a href="?type=<?=$big['id'];?>"> <?= $big['name'];?>(<?=$Goods->count(['sh'=>1,'big'=>$big['id']]);?>)</a>
-                        <div class="s">
+                        <div class="s" >
                             <?php
                             if ($Type->count(["big_id" => $big['id']]) > 0) {
                                 $mids = $Type->all(["big_id" => $big['id']]);
                                 foreach ($mids as $mid) {
                             ?>
-                                    <a href="?type=<?=$mid['id'];?>"><?= $mid['name']; ?>(<?=$Goods->count(['sh'=>1,'mid'=>$mid['id']]);?>)</a>
+                                    <a   href="?type=<?=$mid['id'];?>"><?= $mid['name']; ?>(<?=$Goods->count(['sh'=>1,'mid'=>$mid['id']]);?>)</a>
                             <?php
                                 }
                             }
