@@ -48,6 +48,7 @@ $goods=$Goods->find($_GET['id']);
         </tr>
     </table>
     <div class="ct">
+        <input type="hidden" name="id" value="<?=$goods['id'];?>">
         <input type="submit" value="新增">
         <input type="reset" value="重置">
         <input type="button" value="返回" onclick="location.href='?do=th'">
@@ -65,10 +66,14 @@ $goods=$Goods->find($_GET['id']);
             switch(type){
                 case 'big':
                 $("#big").html(types)
+                $("#big").val(<?=$goods['big'];?>)//顯示正確的大分類
                 getTypes('mid',$("#big").val())
+
                     break;
                 case 'mid':
                 $("#mid").html(types)
+                $("#mid").val(<?=$goods['mid'];?>)//顯示正確的中分類
+
                     break;
             }
 
