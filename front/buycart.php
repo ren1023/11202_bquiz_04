@@ -33,7 +33,6 @@ if (empty($_SESSION['cart'])) { //如果沒有購物車，則
     foreach ($_SESSION['cart'] as $id => $qt) {
         $goods = $Goods->find($id);
     ?>
-
         <tr class="pp ct">
             <td><?= $goods['no']; ?></td>
             <td><?= $goods['name']; ?></td>
@@ -54,8 +53,7 @@ if (empty($_SESSION['cart'])) { //如果沒有購物車，則
 <script>
     function delCart(id){
         $.post("./api/del_cart.php",{id},()=>{
-            location.href="?do=buycart"
+            location.href="?do=buycart";
         })
-
     }
 </script>
