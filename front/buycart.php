@@ -10,7 +10,7 @@ if (!isset($_SESSION['mem'])) { //如果session不存在時，就回到login這�
 echo "<h2 class='ct'>{$_SESSION['mem']} 的購物車</h2>";
 
 
-if (!isset($_SESSION['cart'])) { //如果沒有購物車，則
+if (empty($_SESSION['cart'])) { //如果沒有購物車，則
 
     echo "<h2 class='ct'>購物車中尚無商品<h2>";
 }
@@ -41,7 +41,7 @@ if (!isset($_SESSION['cart'])) { //如果沒有購物車，則
             <td><?= $goods['stock']; ?></td>
             <td><?= $goods['price']; ?></td>
             <td><?= $goods['price'] * $qt; ?></td>
-            <td><img src="./icon/0415.jpg"></td>
+            <td><img src="./icon/0415.jpg" onclick="delCart(<?=$id;?>)"></td>
         </tr>
     <?php
     }
@@ -51,3 +51,11 @@ if (!isset($_SESSION['cart'])) { //如果沒有購物車，則
     <img src="./icon/0411.jpg" >
     <img src="./icon/0412.jpg" >
 </div>
+<script>
+    function delCart(id){
+        $.post("./api/del_cart.php",{id},()=>{
+            location.href="?do=buycart"
+        })
+
+    }
+</script>
