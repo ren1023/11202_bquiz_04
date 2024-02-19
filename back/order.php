@@ -13,21 +13,21 @@
     </tr>
 
     <?php
- $orders = $Order->all();
- foreach ($orders as $order) {
+ $rows = $Order->all();
+ foreach ($rows as $row) {
 ?>
     <tr>
         <td class="pp ct">
-            <a href="?do=detail&id=<?=$order['id'];?>"><?=$order['no'];?></a>
+            <a href="?do=detail&id=<?=$row['id'];?>"><?=$row['no'];?></a>
             
         </td>
-        <td class="pp ct"><?=$order['total'];?></td>
-        <td class="pp ct"><?=$order['acc'];?></td>
-        <td class="pp ct"><?=$order['name'];?></td>
-        <td class="pp ct"><?=date('Y/m/d', strtotime($order['orderdate']));?></td>
+        <td class="pp ct"><?=$row['total'];?></td>
+        <td class="pp ct"><?=$row['acc'];?></td>
+        <td class="pp ct"><?=$row['name'];?></td>
+        <td class="pp ct"><?=date('Y/m/d', strtotime($row['orderdate']));?></td>
         <td class="pp ct">
                 <?php
-                echo "<button onclick='del(&#39;mem&#39;,{$order['id']})'>刪除</button>";
+                echo "<button onclick='del(&#39;mem&#39;,{$row['id']})'>刪除</button>";
 
                 ?>
             </td>
