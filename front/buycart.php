@@ -13,11 +13,8 @@ echo "<h2 class='ct'>{$_SESSION['mem']} 的購物車</h2>";
 if (empty($_SESSION['cart'])) { //如果沒有購物車，則
 
     echo "<h2 class='ct'>購物車中尚無商品<h2>";
-}
-// else{
+}else{
 
-//     dd($_SESSION['cart']);
-// }
 ?>
 <table class="all">
     <tr class="tt ct">
@@ -57,3 +54,6 @@ if (empty($_SESSION['cart'])) { //如果沒有購物車，則
         })
     }
 </script>
+<?php
+}
+?>
