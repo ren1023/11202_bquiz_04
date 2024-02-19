@@ -1,3 +1,4 @@
+<!-- 點選進入結帳櫃檯時的畫面 -->
 <h2 class="ct">填寫資料</h2>
 <!-- table.all>tr*6>td.tt.ct+td.pp>input:text -->
 <?php
@@ -61,7 +62,7 @@ $row = $Mem->find(['acc' => $_SESSION['mem']]);
     </table>
     <div class="all ct tt">總價:<?= $sum; ?>元</div>
     <div class="ct">
-        <input type="hidden" name="id" value="<?= $row['id']; ?>">
+        <input type="hidden" name="total" value="<?=  $sum; ?>">
         <input type="submit" value="確定送出">
         <input type="button" value="返回修改訂單" onclick="location.href='?do=buycart'">
     </div>

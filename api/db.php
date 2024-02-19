@@ -148,5 +148,6 @@ $Mem=new DB('mem');
 $Admin=new DB('admin');
 $Type=new DB('type');//選項大中類
 $Goods=new DB('goods');//商品資料
+$Order=new DB('orders');//商品資料
 
 ?>
