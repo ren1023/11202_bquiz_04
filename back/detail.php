@@ -44,7 +44,6 @@ $row = $Order->find(['id' =>$_GET['id']]);
             <td>小計</td>
         </tr>
         <?php
-        $sum = 0;
         $cart=unserialize($row['cart']);
         foreach ($cart as $id => $qt) {
             $goods = $Goods->find($id);
@@ -62,5 +61,5 @@ $row = $Order->find(['id' =>$_GET['id']]);
     </table>
     <div class="all ct tt">總價:<?= $row['total']; ?>元</div>
     <div class="ct">
-        <button  onclick="location.href='?do=order'">返回
+        <button  onclick="location.href='?do=order'">返回</button>
     </div>
